@@ -1,0 +1,619 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1" http-equiv="Cache-control" content="private">
+<style>
+.main {
+  display: inline;
+}
+.chaNa, .monNa, .zairienItems, .tuilItems, .proItems, .canonItems {
+  display: none;
+}
+body {
+  height: 100%;
+  width: 100%;
+}
+.title {
+  position: fixed;
+  width: 40vw;
+  text-align: center;
+  padding: 1%;
+  font-family: "Papyrus", fantasy;
+  font-size: 3vw;
+  border-style: solid;
+  border-radius: 3vw;
+  background: #BDC4A7;
+  margin-left: 53vw;
+  top: 0%;
+  border-width: 0.5vw;
+  user-select: none;
+} 
+img {
+  user-select: none;
+}
+#npcs, #gillion, #gillion2 {
+  position: fixed;
+  width: 42vw;
+  max-width: 90vh;
+  margin-right: 66vw;
+  bottom: 0px;
+  z-index: 1;
+  opacity: 0%;
+}
+#gillion {
+  bottom: -10%;
+  cursor: help;
+  transition: 0.2s;
+  transition-timing-function: ease-out;
+}
+.icon {
+  position: absolute;
+  width: 3vw;
+  transform: rotate(45deg);
+  right: 0.7vw;
+  top: 1.5%;
+}
+h {
+  position: absolute;
+  background-color: #D8DFBD;
+  transition: 0.4s;
+  height: 100%;
+  width: 100%;
+  left: 0px;
+  top: 0px;
+  text-shadow: 0.2vw 0.2vh red;
+  z-index: 1;
+  transition: 0.8s;
+  }
+h:hover {
+  background-color: #F3F9D2;
+  transition: 0.8s;
+  text-shadow: 0vw 0vh red;
+}
+
+.sidenav {
+  position: fixed;
+  left: -38vw;
+  top: 0%;
+  transition: 0.8s;
+  width: 30vw;
+  padding: 6vw;
+  height: 100%;
+  text-decoration: none;
+  font-size: 4vh;
+  font-family: "Papyrus", fantasy;
+  color: #2F2F2F;
+  background-color: #BDC4A7;
+  text-align: center;
+  z-index: 2;
+  user-select: none;
+}
+.dropbtn {
+  postition: relative;
+  margin-top: 12vh;
+  font-size: 2vw;
+  color: #F3F9D2;
+  background-color: #2F2F2F;
+  font-family: "Papyrus", fantasy;
+  width: 20vw;
+  border-radius: 2vw;
+  cursor: pointer;
+}
+.dropcon {
+  display: none;
+  background: #92B4A7;
+  border-style: solid;
+  border-radius: 2vw;
+  width: 20vw;
+  margin: auto;
+}
+.sidenav:hover {
+  left: 0;
+  background-color: #F3F9D2;
+}
+#latin, #ipsum {
+  position: relative;
+  margin: auto;
+  padding: 1.5%;
+  border-radius: 4vw;
+  cursor: pointer;
+  word-warp: keep-all;
+  font-size: 2vw;
+  border-width: 0.3vw;
+}
+#latin {
+  top: 6vh;
+}
+#ipsum {
+  top: 9vh;
+}
+  
+#latin:hover, #ipsum:hover {
+  color: red;
+  background-color: #D8DFBD;
+}
+
+.dropcon2 {
+  font-size: 2vw;
+  color: #2F2F2F;
+  cursor: pointer;
+}
+.dropcon2:hover, .dropbtn:hover {
+  color: red;
+  cursor: pointer;
+  }
+.welcome {
+  position: fixed;
+  top: 20%;
+  font-family: "Papyrus", fantasy;
+  width: 100%;
+  font-size: 3vw;
+  color: #2F2F2F;
+  text-align: center;
+  user-select: none;
+}
+#words {
+  
+}
+#listC, #listF {
+  margin-left: 24.5vw;
+}
+
+.txtFile {
+  position: relative;
+  font-family: "Papyrus", fantasy;
+  width: 50vw;
+  height: 50vh;
+  background-color: #BDC4A7;
+  /*#92B4A7 #BDC4A7*/
+  border-style: double;
+  border-color: black;
+  border-width: 0.5vw;
+  border-radius: 2vw;
+  overflow: scroll;
+}
+iframe {
+  
+}
+</style>
+</head>
+<body>
+<h id="content">
+<div class="main">
+<a class="title">Web Page of Holding</a> <br>
+<img id="gillion" src="KillionDyedstrider.png"><img>
+<a class="welcome" id="words">
+Ahhh... Yes,<br>Welcome To The Web Page of Holding!
+</a>
+</div>
+<div class="chaNa">
+<a class="title">Character Names</a> <br>
+<img id="npcs" src="npc.png"><img>
+<a class="welcome" id="listC">
+List of Characters <br>
+<iframe src="Fishy Business.txt" class="txtFile" id="textFile"></iframe>
+</a>
+</div>
+<div class="monNa">
+<a class="title">Dragons & Dragons</a> <br>
+<img id="gillion2" src="fish_dad.png"><img>
+<a class="welcome" id="listF">
+List of Foes <br>
+<iframe src="Dragons & Dragons.txt" class="txtFile" id="textFile2"></iframe>
+</a>
+</div>
+
+<div class="zairienItems">
+<a class="title">Player Items (Zarien)</a> <br>
+<a class="welcome" id="listZairien">
+List of Zarien's Items <br>
+<iframe src="Zairien.txt" class="txtFile" id="textFile3"></iframe>
+</a>
+</div>
+
+<div class="tuilItems">
+<a class="title">Player Items (Tuil)</a> <br>
+<a class="welcome" id="listTuil">
+List of Tuil's Items <br>
+<iframe src="Tuil.txt" class="txtFile" id="textFile4"></iframe>
+</a>
+</div>
+
+<div class="proItems">
+<a class="title">Player Items (Kreg)</a> <br>
+<a class="welcome" id="listPro">
+List of Kreg's Items <br>
+<iframe src="Crow Pro.txt" class="txtFile" id="textFile5"></iframe>
+</a>
+</div>
+
+<div class="canonItems">
+<a class="title">Player Items (Canon)</a> <br>
+<a class="welcome" id="listCanon">
+List of Canon's Items <br>
+<iframe src="Canon.txt" class="txtFile" id="textFile6"></iframe>
+</a>
+</div>
+
+</h>
+<div id="mySidenav" class="sidenav">
+<img src="arrow.png" class="icon"> </img>
+<a class="txt" id="latin">Character Names</a><br>
+<a class="txt2" id="ipsum">Dragons & Dragons</a><br>
+ <button class="dropbtn">Player Items 
+    <i class="fa fa-caret-down"></i>
+  </button>
+  <div class="dropcon">
+    <a class="dropcon2" id="Ipsubip">Zarien Hendrix</a><br>
+    <a class="dropcon2" id="IpsuBipsu">Tuil</a><br>
+    <a class="dropcon2" id="IpsuBipsu2">Kreg</a><br>
+    <a class="dropcon2" id="Ipsubip2">Canon</a>
+  </div>
+</div>
+<script>
+  var dropdown = document.getElementsByClassName("dropbtn");
+  var dropcon = document.getElementsByClassName("dropcon");
+  var i;
+   var cont = document.getElementById("content");
+  var main = document.getElementsByClassName("main");
+  var text = document.getElementsByClassName("txt");
+  var npc = document.getElementsByClassName("chaNa");
+  var text2 = document.getElementsByClassName("txt2");
+  var monsters = document.getElementsByClassName("monNa");
+  var nav = document.getElementsByClassName("sidenav");
+  var gill = document.getElementById("gillion");
+  var npc = document.getElementsByClassName("chaNa");
+  
+  var zairien = document.getElementsByClassName("zairienItems");
+  var textZ = document.getElementById("Ipsubip");
+  
+  var tuil = document.getElementsByClassName("tuilItems");
+  var textT = document.getElementById("IpsuBipsu");
+  
+  var crowpro = document.getElementsByClassName("proItems");
+  var textP = document.getElementById("IpsuBipsu2");
+  
+  var canon = document.getElementsByClassName("canonItems");
+  var textC = document.getElementById("Ipsubip2");
+  var arrow = document.getElementsByClassName("icon");
+  var npcImg = document.getElementById("npcs");
+  var gill2 = document.getElementById("gillion2");
+  var textFile = document.getElementById("textFile");
+  var textFile2 = document.getElementById("textFile2");
+  var textFile3 = document.getElementById("textFile3");
+  var textFile4 = document.getElementById("textFile4");
+  var textFile5 = document.getElementById("textFile5");
+  var textFile6 = document.getElementById("textFile6");
+  var count = 0;
+  dropdown[0].addEventListener("click", function() {
+  var dropcon = this.nextElementSibling;
+  if (dropcon.style.display === "block") {
+  dropcon.style.display = "none";
+  } else {
+  dropcon.style.display = "block";
+  }  
+  });
+  
+  text[0].addEventListener("click", () => {
+  if (npc[0].style.display === "inline") {
+  npc[0].style.display = "none";
+  main[0].style.display = "inline";
+  monsters[0].style.display = "none";
+  zairien[0].style.display = "none";
+  tuil[0].style.display = "none";
+  crowpro[0].style.display = "none";
+  canon[0].style.display = "none";
+  text[0].style.backgroundColor = "";
+  text2[0].style.backgroundColor = "";
+  text[0].style.borderStyle = "";
+  text2[0].style.borderStyle = "";
+  textZ[0].style.color = "";
+  textT[0].style.color = "";
+  textP[0].style.color = "";
+  textC[0].style.color = "";
+  }
+  else {
+  main[0].style.display = "none";
+  npc[0].style.display = "inline";
+  monsters[0].style.display = "none";
+  zairien[0].style.display = "none";
+  tuil[0].style.display = "none";
+  crowpro[0].style.display = "none";
+  canon[0].style.display = "none";
+  text[0].style.backgroundColor = "#D8DFBD";
+  text2[0].style.backgroundColor = "";
+  text[0].style.borderStyle = "solid";
+  text2[0].style.borderStyle = "";
+  textZ.style.color = "";
+  textT.style.color = "";
+  textP.style.color = "";
+  textC.style.color = "";
+  } 
+  });
+  text2[0].addEventListener("click", () => { 
+  if (monsters[0].style.display === "inline") {
+  monsters[0].style.display = "none";
+  main[0].style.display = "inline";
+  npc[0].style.display = "none";
+  zairien[0].style.display = "none";
+  tuil[0].style.display = "none";
+  crowpro[0].style.display = "none";
+  canon[0].style.display = "none";
+  text2[0].style.backgroundColor = "";
+  text[0].style.backgroundColor = "";
+  text[0].style.borderStyle = "";
+  text2[0].style.borderStyle = "";
+  textZ.style.color = "";
+  textT.style.color = "";
+  textP.style.color = "";
+  textC.style.color = "";
+  } else {
+  main[0].style.display = "none";
+  npc[0].style.display = "none";
+  monsters[0].style.display = "inline";
+  zairien[0].style.display = "none";
+  tuil[0].style.display = "none";
+  crowpro[0].style.display = "none";
+  canon[0].style.display = "none";
+  text2[0].style.backgroundColor = "#D8DFBD";
+  text[0].style.backgroundColor = "";
+  text2[0].style.borderStyle = "solid";
+  text[0].style.borderStyle = "";
+  textZ.style.color = "";
+  textT.style.color = "";
+  textP.style.color = "";
+  textC.style.color = "";
+  }
+  });
+  textZ.addEventListener("click", () => { 
+  if (zairien[0].style.display === "inline") {
+  zairien[0].style.display = "none";
+  tuil[0].style.display = "none";
+  crowpro[0].style.display = "none";
+  canon[0].style.display = "none";
+  monsters[0].style.display = "none";
+  main[0].style.display = "inline";
+  npc[0].style.display = "none";
+  text2[0].style.backgroundColor = "";
+  text[0].style.backgroundColor = "";
+  text[0].style.borderStyle = "";
+  text2[0].style.borderStyle = "";
+  textZ.style.color = "";
+  textT.style.color = "";
+  textP.style.color = "";
+  textC.style.color = "";
+  } else {
+  main[0].style.display = "none";
+  npc[0].style.display = "none";
+  monsters[0].style.display = "none";
+  zairien[0].style.display = "inline";
+  tuil[0].style.display = "none";
+  crowpro[0].style.display = "none";
+  canon[0].style.display = "none";
+  text2[0].style.backgroundColor = "";
+  text[0].style.backgroundColor = "";
+  text2[0].style.borderStyle = "";
+  text[0].style.borderStyle = "";
+  textZ.style.color = "red";
+  textT.style.color = "";
+  textP.style.color = "";
+  textC.style.color = "";
+  }
+  });
+  textT.addEventListener("click", () => { 
+  if (tuil[0].style.display === "inline") {
+  zairien[0].style.display = "none";
+  tuil[0].style.display = "none";
+  crowpro[0].style.display = "none";
+  canon[0].style.display = "none";
+  monsters[0].style.display = "none";
+  main[0].style.display = "inline";
+  npc[0].style.display = "none";
+  text2[0].style.backgroundColor = "";
+  text[0].style.backgroundColor = "";
+  text[0].style.borderStyle = "";
+  text2[0].style.borderStyle = "";
+  textZ.style.color = "";
+  textT.style.color = "";
+  textP.style.color = "";
+  textC.style.color = "";
+  } else {
+  main[0].style.display = "none";
+  npc[0].style.display = "none";
+  monsters[0].style.display = "none";
+  zairien[0].style.display = "none";
+  tuil[0].style.display = "inline";
+  crowpro[0].style.display = "none";
+  canon[0].style.display = "none";
+  text2[0].style.backgroundColor = "";
+  text[0].style.backgroundColor = "";
+  text2[0].style.borderStyle = "";
+  text[0].style.borderStyle = "";
+  textZ.style.color = "";
+  textT.style.color = "red";
+  textP.style.color = "";
+  textC.style.color = "";
+  }
+  });
+  textP.addEventListener("click", () => { 
+  if (crowpro[0].style.display === "inline") {
+  zairien[0].style.display = "none";
+  tuil[0].style.display = "none";
+  crowpro[0].style.display = "none";
+  canon[0].style.display = "none";
+  monsters[0].style.display = "none";
+  main[0].style.display = "inline";
+  npc[0].style.display = "none";
+  text2[0].style.backgroundColor = "";
+  text[0].style.backgroundColor = "";
+  text[0].style.borderStyle = "";
+  text2[0].style.borderStyle = "";
+  textZ.style.color = "";
+  textT.style.color = "";
+  textP.style.color = "";
+  textC.style.color = "";
+  } else {
+  main[0].style.display = "none";
+  npc[0].style.display = "none";
+  monsters[0].style.display = "none";
+  zairien[0].style.display = "none";
+  tuil[0].style.display = "none";
+  crowpro[0].style.display = "inline";
+  canon[0].style.display = "none";
+  text2[0].style.backgroundColor = "";
+  text[0].style.backgroundColor = "";
+  text2[0].style.borderStyle = "";
+  text[0].style.borderStyle = "";
+  textZ.style.color = "";
+  textT.style.color = "";
+  textP.style.color = "red";
+  textC.style.color = "";
+  }
+  });
+  textC.addEventListener("click", () => { 
+  if (canon[0].style.display === "inline") {
+  zairien[0].style.display = "none";
+  tuil[0].style.display = "none";
+  crowpro[0].style.display = "none";
+  canon[0].style.display = "none";
+  monsters[0].style.display = "none";
+  main[0].style.display = "inline";
+  npc[0].style.display = "none";
+  text2[0].style.backgroundColor = "";
+  text[0].style.backgroundColor = "";
+  text[0].style.borderStyle = "";
+  text2[0].style.borderStyle = "";
+  textZ.style.color = "";
+  textT.style.color = "";
+  textP.style.color = "";
+  textC.style.color = "";
+  } else {
+  main[0].style.display = "none";
+  npc[0].style.display = "none";
+  monsters[0].style.display = "none";
+  zairien[0].style.display = "none";
+  tuil[0].style.display = "none";
+  crowpro[0].style.display = "none";
+  canon[0].style.display = "inline";
+  text2[0].style.backgroundColor = "";
+  text[0].style.backgroundColor = "";
+  text2[0].style.borderStyle = "";
+  text[0].style.borderStyle = "";
+  textZ.style.color = "";
+  textT.style.color = "";
+  textP.style.color = "";
+  textC.style.color = "red";
+  }
+  });
+  
+  //Gillion start
+  dropcon[0].addEventListener("mouseover", () => {
+  if (gill.style.transform === "rotateZ(-75deg)") {
+  gill.style.transition = "1s";
+  gill.style.left = "80vw";
+  gill.style.top = "20%";
+  gill.style.bottom = "";
+  }
+  else if (gill.style.transform === "rotateZ(90deg)"){
+  gill.style.transitionDelay = "1s";
+  gill.style.transitionDuration = "1s";
+  gill.style.marginLeft = "27vw";
+  gill.style.cursor = "grabbing";
+  }
+  });
+  nav[0].addEventListener("mouseenter", () => {
+  if (gill.style.bottom === "-100%") {
+  gill.style.transition = "0s";
+  gill.style.left = "100vw";
+  gill.style.top = "0%";
+  gill.style.transform = "rotateZ(-75deg)";
+  }
+  else if (gill.style.left !== "80vw") {
+  gill.style.transitionDelay = "1s";
+  gill.style.transitionDuration = "0s";
+  gill.style.transform = "rotateZ(90deg)";
+  gill.style.bottom = "25%"
+  }
+  });
+  nav[0].addEventListener("mouseleave", () => {
+  if (gill.style.transitionDuration === "0s") {
+  gill.style.transition = "0s";
+  gill.style.transform = "rotateZ(0deg)";
+  gill.style.marginLeft = "0%";
+  gill.style.bottom = "-10%";
+  }
+  else if (gill.style.transform === "rotateZ(90deg)") {
+  gill.style.transition = "0.2s";
+  gill.style.transform = "rotateZ(0deg)";
+  gill.style.marginLeft = "0%";
+  gill.style.bottom = "-10%";
+  }
+  });
+  gill.addEventListener("click", () => {
+  if (count === 1) {
+  alert("Gillion!");
+  }
+  else if (gill.style.cursor === "grabbing") {
+  gill.style.transition = "0.2s";
+  gill.style.bottom = "-100%";
+  gill.style.marginLeft = "";
+  gill.style.cursor = "help";
+  count = 1;
+  }
+  });
+  gill.addEventListener("load", () => {
+  gill.style.transition = "2s";
+  gill.style.opacity = "100%";
+  }); //Gillion end
+  npcImg.addEventListener("load", () => {
+  npcImg.style.transition = "2s";
+  npcImg.style.opacity = "100%";
+  });
+  gill2.addEventListener("load", () => {
+  gill2.style.transition = "2s";
+  gill2.style.opacity = "100%";
+  });
+  nav[0].addEventListener("mouseenter", () => {
+  arrow[0].style.transitionDuration = "0.8s";
+  arrow[0].style.transform = "rotate(585deg)";
+  });
+  nav[0].addEventListener("mouseleave", () => {
+  arrow[0].style.transitionDuration = "0.8s";
+  arrow[0].style.transform = "";
+  });
+  textFile.addEventListener("load", () => {
+  let myiFrame = document.getElementById("textFile");
+   let doc = myiFrame.contentDocument;
+   doc.body.innerHTML += '<style>::-webkit-scrollbar {width: 3vw; background-color: #92B4A7; border-style: solid; border-top-style: none; border-bottom-style: none; border-right-style: none;}::-webkit-scrollbar-thumb {background-color: black; border-radius: 5vw;} pre {min-height: 100vw; font-family: "Papyrus", fantasy; font-size: 4vw; border-style: inset; border-color: black; border-width: 0.5vw; background-color: white;} body {background-color: #D8DFBD;}</style>'; 
+  });
+  textFile2.addEventListener("load", () => {
+  let myiFrame2 = document.getElementById("textFile2");
+   let doc2 = myiFrame2.contentDocument;
+   doc2.body.innerHTML += '<style>::-webkit-scrollbar {width: 3vw; background-color: #92B4A7; border-style: solid; border-top-style: none; border-bottom-style: none; border-right-style: none;}::-webkit-scrollbar-thumb {background-color: black; border-radius: 5vw;} pre {min-height: 100vw; font-family: "Papyrus", fantasy; font-size: 4vw; border-style: inset; border-color: black; border-width: 0.5vw; background-color: white;} body {background-color: #D8DFBD;}</style>';
+  });
+  textFile3.addEventListener("load", () => {
+  let myiFrame3 = document.getElementById("textFile3");
+   let doc3 = myiFrame3.contentDocument;
+   doc3.body.innerHTML += '<style>::-webkit-scrollbar {width: 3vw; background-color: #92B4A7; border-style: solid; border-top-style: none; border-bottom-style: none; border-right-style: none;}::-webkit-scrollbar-thumb {background-color: black; border-radius: 5vw;} pre {min-height: 100vw; font-family: "Papyrus", fantasy; font-size: 4vw; border-style: inset; border-color: black; border-width: 0.5vw; background-color: white;} body {background-color: #D8DFBD;}</style>';
+  });
+  textFile4.addEventListener("load", () => {
+  let myiFrame4 = document.getElementById("textFile4");
+   let doc4 = myiFrame4.contentDocument;
+   doc4.body.innerHTML += '<style>::-webkit-scrollbar {width: 3vw; background-color: #92B4A7; border-style: solid; border-top-style: none; border-bottom-style: none; border-right-style: none;}::-webkit-scrollbar-thumb {background-color: black; border-radius: 5vw;} pre {min-height: 100vw; font-family: "Papyrus", fantasy; font-size: 4vw; border-style: inset; border-color: black; border-width: 0.5vw; background-color: white;} body {background-color: #D8DFBD;}</style>';
+  });
+  textFile5.addEventListener("load", () => {
+  let myiFrame5 = document.getElementById("textFile5");
+   let doc5 = myiFrame5.contentDocument;
+   doc5.body.innerHTML += '<style>::-webkit-scrollbar {width: 3vw; background-color: #92B4A7; border-style: solid; border-top-style: none; border-bottom-style: none; border-right-style: none;}::-webkit-scrollbar-thumb {background-color: black; border-radius: 5vw;} pre {min-height: 100vw; font-family: "Papyrus", fantasy; font-size: 4vw; border-style: inset; border-color: black; border-width: 0.5vw; background-color: white;} body {background-color: #D8DFBD;}</style>';
+  });
+  textFile6.addEventListener("load", () => {
+  let myiFrame6 = document.getElementById("textFile6");
+   let doc6 = myiFrame6.contentDocument;
+   doc6.body.innerHTML += '<style>::-webkit-scrollbar {width: 3vw; background-color: #92B4A7; border-style: solid; border-top-style: none; border-bottom-style: none; border-right-style: none;}::-webkit-scrollbar-thumb {background-color: black; border-radius: 5vw;} pre {min-height: 100vw; font-family: "Papyrus", fantasy; font-size: 4vw; border-style: inset; border-color: black; border-width: 0.5vw; background-color: white;} body {background-color: #D8DFBD;}</style>';
+  console.log(doc6.body.innerHTML);
+  });
+  
+</script>
+   
+</body>
+</html> 

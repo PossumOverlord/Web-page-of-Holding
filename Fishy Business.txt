@@ -1,0 +1,28 @@
+Folk of the Under Sea:
+Lucette Everstride
+Cal Mary
+Ray Sting
+Aba Aba Lingcod
+Bonito Musselini
+Convict Benny
+Ling Herring
+
+MSC NPC:
+Joolion
+Alec Xander
+Alex Xander
+Alexa Xander
+
+Shantown:
+Piddle Pirate - ???
+Chuck Chicken - Aarakocra with chicken like features
+
+Alfinn
+STR 7 + 0 = 7
+DEX 11 + 0 = 11
+CON 9 + 0 = 9
+INT 12 + 2 = 14
+WIS 9 + 0 = 9
+CHA 11 + 1 = 12
+
+
